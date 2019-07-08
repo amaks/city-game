@@ -10,9 +10,6 @@ export const drawChart = () => {
     array.push([actionTypes[key][0], state[key]])
   }
 
-  console.log("drawChart");
-  console.log(state);
-
   return {
     data: array
   }

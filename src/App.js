@@ -2,6 +2,7 @@ import React from 'react';
 import Heading from './components/header';
 import InputForm from './components/input_form';
 import GoogleChart from './components/chart';
+import ChosenAction from './components/chosen_action';
 import './App.css';
 
 
@@ -18,6 +19,7 @@ function App() {
       <Heading />
       <InputForm />
       <GoogleChart />
+      <ChosenAction />
     </div>
   );
 }
