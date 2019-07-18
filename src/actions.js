@@ -15,8 +15,3 @@ export const drawChart = () => {
   }
 }
 
-export const onSelectChange = e => {
-  console.log("onSelectChange");
-  console.log(e.currentTarget.value);
-  return {}
-}

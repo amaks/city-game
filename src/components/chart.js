@@ -3,6 +3,7 @@ import Chart from 'react-google-charts';
 import { drawChart } from '../actions';
 
 const GoogleChart = () => {
+  let items = drawChart()['data'];
   return (
     <div className="container-fluid">
       <div className="row">
@@ -14,7 +15,7 @@ const GoogleChart = () => {
               height={300}
               chartType="BarChart"
               loader={<div>Loading Chart</div>}
-              data={drawChart()['data']}
+              data={items}
               options={{
                 chartArea: { width: '50%' },
                 hAxis: {

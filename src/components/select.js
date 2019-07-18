@@ -1,16 +1,31 @@
 import React from 'react';
-import { onSelectChange } from '../actions';
+import { getActions } from '../App';
 
-const Select = () => {
+class Select extends React.Component {
 
-  return (
-      <select onChange={onSelectChange} className="form-control" id="enterCode">
-        <option></option>
-        <option value="1">16 этажный дом в сов р-не</option>
-        <option value="2">малоэтажный  в сов</option>
-        <option value="3">утеплить Хрущевки</option>
-      </select>
-    );
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+    this.items = getActions();
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.props.onSelectItem(event.currentTarget.value);
+  }
+
+  render() {
+    return (
+        <select onChange={this.handleChange} value={this.state.value} className="form-control" id="enterCode">
+          <option>Выбрать действие</option>
+
+            { this.items.map((item, index) => (
+              <option key={`list-item-${index}`} value={index}>{ item['name'] }</option>
+            ))}
+
+        </select>
+      );
+  }
 };
 
 export default Select;
