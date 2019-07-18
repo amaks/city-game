@@ -6,12 +6,12 @@ import ChosenAction from './components/chosen_action';
 import './App.css';
 
 let budget = 1000;
-let state = { a: 2, b: 1, c: 3  };
-let actionTypes = { a: ['жилье', 2], b: ['транспорт', 1], c: ['Благоустройство', 3] };
+let state = { a: 0, b: 0, c: 0  };
+let actionTypes = { a: ['Жилье', 2], b: ['Транспорт', 1], c: ['Благоустройство', 3] };
 let typesAction = { a: [1, 2, 3], b: [], c: [] };
-let actionsTypes = { 1: 'a', 2: 'b', 3: 'c' };
+let actionsTypes = { 0: 'a', 1: 'b', 2: 'c' };
 let chosenActions = []
-let actions = [{ name: '16 этажный дом в сов р-не', price: 100}, { name: 'Малоэтажный в сов', price: 50 }, { name: 'Утеплить Хрущевки', price: 200 }]
+let actions = [{ name: '16 этажный дом в сов р-не', price: 100, value: 1}, { name: 'Малоэтажный в сов', price: 50, value: 2 }, { name: 'Утеплить Хрущевки', price: 200, value: 3 }]
 
 export const getState = () => state;
 export const getBudget = () => budget;
@@ -25,20 +25,16 @@ export const updateState = newState => {
   state[newStateKey] = Number(oldValue) + Number(newState);
 };
 
-export const addChosenActions = newAction => {
-  deductFromBudget(actions[newAction]['price'])
-  chosenActions.push(actions[newAction]);
+export const addChosenActions = action => {
+  deductFromBudget(actions[action]['price'])
+  chosenActions.push(actions[action]);
 };
 
 export const removeChosenAction = action => {
   addToBudget(actions[action]['price'])
   // remove action from chosenActions
-  console.log(chosenActions);
-
   var index = chosenActions.indexOf(actions[action]);
   if (index !== -1) chosenActions.splice(index, 1);
-
-  console.log(chosenActions);
 };
 
 export const deductFromBudget = price => {
@@ -60,21 +56,25 @@ class App extends React.Component {
     this.deleteItem = this.deleteItem.bind(this);
   }
 
-  changeItem(newState) {
-    let newStateKey = actionsTypes[newState]
+  changeItem(item) {
+
+    let newStateKey = actionsTypes[item]
     let oldValue = state[newStateKey]
-    state[newStateKey] = Number(oldValue) + Number(newState);
+    let newValue = actions[item]['value']
+
+    state[newStateKey] = Number(oldValue) + Number(newValue);
 
     this.setState({data: state});
 
-    addChosenActions(newState)
+    addChosenActions(item)
   }
 
   deleteItem(item) {
 
     let newStateKey = actionsTypes[item]
     let oldValue = state[newStateKey]
-    state[newStateKey] = Number(oldValue) - Number(item);
+    let newValue = actions[item]['value']
+    state[newStateKey] = Number(oldValue) - Number(newValue);
 
     this.setState({data: state});
 
