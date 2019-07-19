@@ -4,7 +4,6 @@ import { drawChart } from '../actions';
 
 const GoogleChart = () => {
   let items = drawChart()['data'];
-  console.log(items);
   return (
     <div className="container-fluid">
       <div className="row">
