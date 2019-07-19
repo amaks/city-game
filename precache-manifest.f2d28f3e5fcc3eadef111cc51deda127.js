@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63175896813627dc8606a96ce730b0a9",
+    "revision": "1b3a80d1ffbb8b54f05e2f75f9d3710e",
     "url": "/city-game/index.html"
   },
   {
-    "revision": "b870f3b643b9c4e0fdb6",
+    "revision": "5029b06630ff50e937eb",
     "url": "/city-game/static/css/main.6aa8aef3.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/city-game/static/js/2.7bd98c86.chunk.js"
   },
   {
-    "revision": "b870f3b643b9c4e0fdb6",
-    "url": "/city-game/static/js/main.b3383531.chunk.js"
+    "revision": "5029b06630ff50e937eb",
+    "url": "/city-game/static/js/main.93ffda08.chunk.js"
   },
   {
     "revision": "363ebaf164003d0010f9",
