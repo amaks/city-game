@@ -4,6 +4,7 @@ import { drawChart } from '../actions';
 
 const GoogleChart = () => {
   let items = drawChart()['data'];
+  console.log(items);
   return (
     <div className="container-fluid">
       <div className="row">
@@ -17,6 +18,7 @@ const GoogleChart = () => {
               loader={<div>Loading Chart</div>}
               data={items}
               options={{
+                legend: { position: 'none' },
                 chartArea: { width: '50%' },
                 hAxis: {
                   title: 'Действия',
@@ -26,7 +28,6 @@ const GoogleChart = () => {
                   title: '',
                 },
               }}
-              legendToggle
             />
           </div>
         </div>

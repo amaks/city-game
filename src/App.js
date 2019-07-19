@@ -7,7 +7,7 @@ import './App.css';
 
 let budget = 1000;
 let state = { a: 0, b: 0, c: 0  };
-let actionTypes = { a: ['Жилье', 2], b: ['Транспорт', 1], c: ['Благоустройство', 3] };
+let actionTypes = { a: ['Жилье', 2, 'silver'], b: ['Транспорт', 1, 'gold'], c: ['Благоустройство', 3, '#b87333'] };
 let typesAction = [{ name: 'Жилье', code: 'a', actions: [0]}, {name: 'Транспорт', code: 'b', actions: [1]}, {name: 'Благоустройство', code: 'c', actions: [2]}];
 let actionsTypes = { 0: 'a', 1: 'b', 2: 'c' };
 let chosenActions = []
