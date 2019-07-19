@@ -1,5 +1,5 @@
 import React from 'react';
-import { getChosenActions, getBudget, getActions } from '../App';
+import { getChosenActions, getBudget, getActions, getActionTypeName } from '../App';
 
 class ChosenAction extends React.Component {
 
@@ -20,13 +20,17 @@ class ChosenAction extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm"></div>
-          <div className="col-sm">
+          <div className="col-sm-5">
             <ol className='list-group-flush align_left'>
               <li className='list-group-item'>
                 <strong>Начальный бюджет: 1000 EUR</strong>
               </li>
              { this.items.map((item, index) => (
-              <li className='list-group-item' key={`list-item-${index}`}>{index + 1}. <i>{ item['name'] }:</i> {item['price']} EUR
+              <li className='list-group-item' key={`list-item-${index}`}>{index + 1}.
+                &nbsp;
+                <i>{getActionTypeName(this.actions.indexOf(item))} - </i>
+                &nbsp;
+                { item['name'] }: {item['price']} EUR
                 &nbsp;
                 <a href='' data-item={this.actions.indexOf(item)} onClick={this.handleDelete}>x</a>
               </li>

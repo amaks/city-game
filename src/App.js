@@ -8,7 +8,7 @@ import './App.css';
 let budget = 1000;
 let state = { a: 0, b: 0, c: 0  };
 let actionTypes = { a: ['Жилье', 2], b: ['Транспорт', 1], c: ['Благоустройство', 3] };
-let typesAction = { a: [1, 2, 3], b: [], c: [] };
+let typesAction = [{ name: 'Жилье', code: 'a', actions: [0]}, {name: 'Транспорт', code: 'b', actions: [1]}, {name: 'Благоустройство', code: 'c', actions: [2]}];
 let actionsTypes = { 0: 'a', 1: 'b', 2: 'c' };
 let chosenActions = []
 let actions = [{ name: '16 этажный дом в сов р-не', price: 100, value: 1}, { name: 'Малоэтажный в сов', price: 50, value: 2 }, { name: 'Утеплить Хрущевки', price: 200, value: 3 }]
@@ -17,7 +17,12 @@ export const getState = () => state;
 export const getBudget = () => budget;
 export const getActions = () => actions;
 export const getActionTypes = () => actionTypes;
+export const getTypesAction = () => typesAction;
 export const getChosenActions = () => chosenActions;
+export const getActionTypeName = (action_id) => {
+  let actionType = actionsTypes[action_id]
+  return actionTypes[actionType][0]
+}
 
 export const updateState = newState => {
   let newStateKey = actionsTypes[newState]
