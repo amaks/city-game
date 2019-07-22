@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/city-game/static/css/main.6aa8aef3.chunk.css",
-    "main.js": "/city-game/static/js/main.abbfabb7.chunk.js",
-    "main.js.map": "/city-game/static/js/main.abbfabb7.chunk.js.map",
+    "main.js": "/city-game/static/js/main.5765d578.chunk.js",
+    "main.js.map": "/city-game/static/js/main.5765d578.chunk.js.map",
     "runtime~main.js": "/city-game/static/js/runtime~main.a4debc96.js",
     "runtime~main.js.map": "/city-game/static/js/runtime~main.a4debc96.js.map",
     "static/js/2.7bd98c86.chunk.js": "/city-game/static/js/2.7bd98c86.chunk.js",
     "static/js/2.7bd98c86.chunk.js.map": "/city-game/static/js/2.7bd98c86.chunk.js.map",
     "index.html": "/city-game/index.html",
-    "precache-manifest.ba65578612a80cfa0ae709863974a597.js": "/city-game/precache-manifest.ba65578612a80cfa0ae709863974a597.js",
+    "precache-manifest.81b1498c343eb42faa5637193c20753c.js": "/city-game/precache-manifest.81b1498c343eb42faa5637193c20753c.js",
     "service-worker.js": "/city-game/service-worker.js",
     "static/css/main.6aa8aef3.chunk.css.map": "/city-game/static/css/main.6aa8aef3.chunk.css.map"
   }
