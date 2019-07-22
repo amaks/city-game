@@ -7,11 +7,11 @@ import './App.css';
 
 let budget = 1000;
 let state = { a: 0, b: 0, c: 0  };
-let actionTypes = { a: ['Жилье', 2, 'silver'], b: ['Транспорт', 1, 'gold'], c: ['Благоустройство', 3, '#b87333'] };
+let actionTypes = { a: ['Типовой совок бедный', 2, 'silver'], b: ['Создают барьеры, риск гетто, сегрегации', 1, 'gold'], c: ['Понты - все как у людей', 3, '#b87333'] };
 let typesAction = [{ name: 'Жилье', code: 'a', actions: [0]}, {name: 'Транспорт', code: 'b', actions: [1]}, {name: 'Благоустройство', code: 'c', actions: [2]}];
 let actionsTypes = { 0: 'a', 1: 'b', 2: 'c' };
 let chosenActions = []
-let actions = [{ name: '16 этажный дом в сов р-не', price: 100, value: 1}, { name: 'Малоэтажный в сов', price: 50, value: 2 }, { name: 'Утеплить Хрущевки', price: 200, value: 3 }]
+let actions = [{ name: '16 этажный дом в сов р-не', price: 100, value: 1}, { name: 'Цены на транспорт повысить для всех', price: 50, value: 2 }, { name: 'Реконстр. Площади - клумба', price: 200, value: 3 }]
 
 export const getState = () => state;
 export const getBudget = () => budget;
